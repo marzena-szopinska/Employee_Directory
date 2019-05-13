@@ -26,7 +26,7 @@ function generateEmployee(data){
     html += `<p class="name">${employee.name.first} ${employee.name.last}</p>`;
     html += `<p class="email">${employee.email}</p>`;
     html += `<p class="place">${employee.location.city}</p></div>`;
-    html += '<li>';
+    html += '</li>';
   });
   employee.innerHTML = html;
 
