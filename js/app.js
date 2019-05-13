@@ -1,14 +1,3 @@
-// <li class="person">
-//   <div class="image">
-//     <img src='mockup/employee_overlay.png' alt>
-//   </div>
-//   <div class="info">
-//     <p class="name">Alex Brown</p>
-//     <p class="email">alex.example@com</p>
-//     <p class="place">Boston</p>
-//   </div>
-// </li>
-
 const employee = document.getElementById('employee');
 let employeeInfo = [];
 
@@ -17,8 +6,8 @@ fetch('https://randomuser.me/api/?results=12')
 .then(data => generateEmployee(data.results));
 
 function generateEmployee(data){
-  employeeInfo = data;
   console.log(data);
+  employeeInfo = data;
   let html = '';
   data.forEach(employee => {
     html += `<li class="person" id="${employee.name.first}">`;
@@ -33,9 +22,15 @@ function generateEmployee(data){
 
 }
 
-// open modal WINDOW
 employee.addEventListener('click', (e) => {
-    openModal(e.target.id);
+    if(e.target.className === 'person'){
+        openModal(e.target.id);
+    } else if(e.target.className === 'info' || e.target.className === 'image') {
+      openModal(e.target.parentNode.id);
+    } else {
+      openModal(e.target.parentNode.parentNode.id);
+    }
+
 });
 
 function openModal(id) {

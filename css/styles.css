@@ -146,7 +146,7 @@ img {
     margin: 0 auto;
   }
 
-  .place, .email {
+  .place, .email, .age, .address {
     font-size: .85rem;
   }
 
