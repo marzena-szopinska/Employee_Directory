@@ -35,13 +35,7 @@ function generateEmployee(data){
 
 // open modal WINDOW
 employee.addEventListener('click', (e) => {
-  openModal(e.target.id);
-});
-
-// close the modal window
-const close = document.querySelector('.fa-times');
-close.addEventListener('click', () => {
-  modalClose();
+    openModal(e.target.id);
 });
 
 function openModal(id) {
@@ -66,6 +60,13 @@ function openModal(id) {
     }
 
     modalContent.innerHTML = html;
+
+    // close the modal window
+    const close = document.querySelector('.fa-times');
+    close.addEventListener('click', () => {
+      modalClose();
+    });
+
 }
 
 function cutString(string) {
