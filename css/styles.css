@@ -7,7 +7,7 @@
 body {
   font-size: 1rem;
   font-family: 'Lato', sans-serif;
-  background-color: #F6F6F6;
+    background-color: #F6F6F6;
 }
 
 h3 {
@@ -24,6 +24,7 @@ ul {
 #employee { grid-area: employee; }
 
 .container {
+  text-align: center;
   width: 100%;
   padding: 2rem;
   display: grid;
@@ -58,6 +59,10 @@ ul {
   color: #A5A6A6;
 }
 
+.email {
+  word-break: break-all;
+}
+
 .info {
   margin-top: 10px;
 }
@@ -87,7 +92,36 @@ ul {
 }
 
 @media (min-width: 1024px) {
+  .container {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+
+  .place, .email {
+    font-size: .85rem;
+  }
+
   #employee {
+    grid-column-gap: 50px;
     grid-template-columns:minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+  }
+
+  .image img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  .person {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .image, .info {
+    flex-grow: 1;
+  }
+
+  .info {
+    margin-top: 7px;
   }
 }
