@@ -181,4 +181,9 @@ img {
   .info {
     margin-top: 7px;
   }
+
+  hr {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
