@@ -28,18 +28,6 @@ function generateEmployee(data){
     html += `<p class="place">${employee.location.city}</p></div>`;
     html += '<li>';
   });
-
-
   employee.innerHTML = html;
-
-}
-
-
-function generateImage(data){
-
-}
-
-function generateInfo(data){
-
 
 }

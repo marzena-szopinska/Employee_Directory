@@ -23,7 +23,6 @@ ul {
 .main-text { grid-area: main-text; }
 #employee { grid-area: employee; }
 
-
 .container {
   width: 100%;
   padding: 2rem;
@@ -35,6 +34,7 @@ ul {
 }
 
 .person {
+  width: 100%;
   padding: 1rem;
   background-color: #fff;
   border: 2px solid #D0D0D0;
@@ -69,12 +69,25 @@ ul {
 #employee {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 15px;
+  grid-gap: 10px;
+  grid-template-columns: minmax(100px, 1fr);
+  grid-template-rows: minmax(100px, auto);
 }
 
 .image img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  #employee {
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #employee {
+    grid-template-columns:minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+  }
 }
