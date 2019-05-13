@@ -138,12 +138,20 @@ img {
   #employee {
     grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
   }
+
+  .bg-modal {
+    height: 145vh;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
     max-width: 1224px;
     margin: 0 auto;
+  }
+
+  .bg-modal {
+    height: 100%;
   }
 
   .place, .email, .age, .address {
