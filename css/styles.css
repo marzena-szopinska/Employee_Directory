@@ -7,4 +7,52 @@
 body {
   font-size: 1rem;
   font-family: 'Lato', sans-serif;
+  background-color: #F6F6F6;
+}
+
+h3 {
+  color: gray;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Setting up the grid areas for the project */
+.main-text { grid-area: main-text; }
+#employee { grid-area: employee; }
+
+
+.container {
+  padding: 2rem;
+  display: grid;
+
+  grid-gap: 10px;
+  grid-template-areas:
+  'main-text'
+  'employee';
+}
+
+.person {
+  padding: 1rem;
+  background-color: #fff;
+  border: 2px solid #D0D0D0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+#employee {
+
+}
+
+.image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
