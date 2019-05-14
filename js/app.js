@@ -69,8 +69,8 @@ function cutString(string) {
   let day = shortString.slice(8, 10);
   let month = shortString.slice(5, 7);
   let year = shortString.slice(2, 4);
-  // form the right date format
-  const newString = `${day}/${month}/${year}`;
+  // form the right date format mm/dd/yyyy
+  const newString = `${month}/${day}/${year}`;
   // return a new string
   return newString;
 }
