@@ -10,13 +10,13 @@ function generateEmployee(data){
   employeeInfo = data;
   let html = '';
   data.forEach(employee => {
-    html += `<li class="person" id="${employee.name.first}">`;
-    html += `<div class='image'><img src='${employee.picture.medium}' alt='${employee.name.title} ${employee.name.first}'></div>`;
-    html += '<div class="info">';
-    html += `<p class="name">${employee.name.first} ${employee.name.last}</p>`;
-    html += `<p class="email">${employee.email}</p>`;
-    html += `<p class="place">${employee.location.city}</p></div>`;
-    html += '</li>';
+    html += `<li class="person" id="${employee.name.first}">
+              <div class='image'><img src='${employee.picture.medium}' alt='${employee.name.title} ${employee.name.first}'></div>
+              <div class="info">
+              <p class="name">${employee.name.first} ${employee.name.last}</p>
+              <p class="email">${employee.email}</p>
+              <p class="place">${employee.location.city}</p></div>
+            </li>`;
   });
   employee.innerHTML = html;
 
