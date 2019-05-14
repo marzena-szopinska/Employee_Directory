@@ -88,7 +88,7 @@ p {
 #employee {
   width: 100%;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 30px;
   grid-template-columns: minmax(100px, 1fr);
   grid-template-rows: minmax(100px, auto);
 }
@@ -153,7 +153,7 @@ p {
   }
 
   .modal-content {
-    width: 35%;
+    width: 45%;
   }
 }
 
@@ -165,6 +165,10 @@ p {
 
   .bg-modal {
     height: 100%;
+  }
+
+  .modal-content {
+    width: 25%;
   }
 
   .place, .email, .age, .address {

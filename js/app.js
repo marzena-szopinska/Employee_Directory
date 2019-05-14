@@ -30,7 +30,6 @@ employee.addEventListener('click', (e) => {
     } else {
       openModal(e.target.parentNode.parentNode.id);
     }
-
 });
 
 function openModal(id) {
@@ -65,7 +64,15 @@ function openModal(id) {
 }
 
 function cutString(string) {
-  return string.slice(0, 10);
+  let shortString = string.slice(0, 10);
+  // cut the necessary numbers
+  let day = shortString.slice(8, 10);
+  let month = shortString.slice(5, 7);
+  let year = shortString.slice(2, 4);
+  // form the right date format
+  const newString = `${day}/${month}/${year}`;
+  // return a new string
+  return newString;
 }
 
 function modalClose() {
